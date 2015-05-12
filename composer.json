@@ -1,0 +1,28 @@
+{
+	"name": "elpeter/kickbox-cakephp",
+	"type": "cakephp-plugin",
+	"version": "1.0.0",
+	"description": "Email validator via Kickbox Service for CakePHP",
+	"keywords": ["free", "email", "validation", "kickbox", "service", "verification", "sendex"],
+	"homepage": "https://github.com/elpeter/kickbox-cakephp",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Pedro Ventura",
+			"homepage": "https://github.com/elpeter/kickbox-cakephp"
+		}
+	],
+	"config": {
+		"vendor-dir": "Vendor"
+	},
+	"require": {
+		"kickbox/kickbox": "*",
+		"guzzle/guzzle": "*"
+	},
+	"support": {
+		"issues": "https://github.com/elpeter/kickbox-cakephp/issues"
+	},
+	"extra": {
+		"installer-name" : "Kickbox-Email-Validator"
+	}
+}
