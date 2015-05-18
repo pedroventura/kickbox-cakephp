@@ -14,6 +14,24 @@ App::uses('CakeLog', 'Log');
 class ValidatorComponent extends Component {
 
 /**
+ * $mesage
+ *
+ * @var mixed
+ *
+ * @access public
+ */
+	public $message = false;
+
+/**
+ * $didYouMean
+ *
+ * @var mixed
+ *
+ * @access public
+ */
+	public $didYouMean = false;
+
+/**
  * verify
  * 
  * @param mixed $email Description.
@@ -59,6 +77,12 @@ class ValidatorComponent extends Component {
 			if (!empty($res->body['result'])) {
 				//result string - The verification result: deliverable, undeliverable, risky, unknown
 				if ($res->body['result'] == 'deliverable') {
+					if (!empty($res->body['message'])) {
+						$this->message = $res->body['message'];
+					}
+					if (!empty($res->body['did_you_mean'])) {
+						$this->didYouMean = $res->body['did_you_mean'];
+					}
 					$this->__log('Email verification OK.');
 					return true;
 				}
