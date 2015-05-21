@@ -7,7 +7,7 @@ CakePHP Plugin for Email Verification by using Kickbox Service. http://kickbox.i
 You can add the plugin as submodule in your project, via git submodule:
 
 ```sh
-$ git submodule add git@github.com:elpeter/kickbox-cakephp.git app/Plugin/KickboxEmail
+$ git submodule add git@github.com:pedroventura/kickbox-cakephp.git app/Plugin/KickboxEmail
 ```
 
 Otherwise, you can use git clone or download it. Place it in the Plugin folder.
